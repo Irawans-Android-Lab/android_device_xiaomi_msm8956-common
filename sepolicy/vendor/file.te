@@ -15,6 +15,10 @@ type keylayout_file, file_type, vendor_file_type;
 # Loop sysfs files
 type sysfs_loop, fs_type, sysfs_type;
 
+# msm_irqbalance
+type proc_irq, fs_type, proc_type;
+type irqbalance_socket, file_type;
+
 # PCI
 type proc_pci_devices, fs_type, proc_type;
 
