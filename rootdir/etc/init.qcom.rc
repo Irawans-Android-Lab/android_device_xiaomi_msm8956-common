@@ -649,10 +649,6 @@ on charger
     load_system_props
     start vendor.qcom-post-boot
 
-on property:init.svc.surfaceflinger=restarting
-    stop vendor.hwcomposer-2-1
-    start vendor.hwcomposer-2-1
-
 service vendor.time_daemon /system/vendor/bin/time_daemon
     class main
     user root
