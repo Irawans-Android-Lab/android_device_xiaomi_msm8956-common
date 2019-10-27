@@ -245,7 +245,8 @@ PRODUCT_PACKAGES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    ims-ext-common
+    ims-ext-common \
+    ims-ext-common_system
 
 # IPA Manager
 #PRODUCT_PACKAGES += \
