@@ -342,7 +342,7 @@ etc/firmware/a530_pm4.fw
 # IPA
 vendor/bin/ipacm-diag
 
-# Keystore
+# Keystore - from F5122 34.4.A.2.118 CIS RU-UA-KZ-BY
 vendor/lib64/hw/keystore.msm8952.so
 
 # Listen	
