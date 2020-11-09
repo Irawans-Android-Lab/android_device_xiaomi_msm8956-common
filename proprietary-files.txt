@@ -333,7 +333,7 @@ etc/firmware/a530_pm4.fw
 vendor/bin/ipacm-diag
 
 # Keystore - from F5122 34.4.A.2.118 CIS RU-UA-KZ-BY
-vendor/lib64/hw/keystore.msm8952.so|0f5b3722cdc4e442d6b128775a32be8d8f49b83e
+vendor/lib64/hw/keystore.msm8952.so|fea2fd3ee026a0dd14998620096ccc13c4bf2679
 
 # Listen	
 vendor/lib/hw/sound_trigger.primary.msm8952.so	
