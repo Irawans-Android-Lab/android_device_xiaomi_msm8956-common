@@ -134,6 +134,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
+    libldacBT_dec \
     libbt-vendor
 
 PRODUCT_COPY_FILES += \
