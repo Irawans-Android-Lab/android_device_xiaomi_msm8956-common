@@ -4,8 +4,20 @@ allow init debugfs:file write;
 # Boot reason
 allow init proc_kernel_boot_reason:file { read getattr };
 
+# Diag
+allow init diag_device:chr_file rw_file_perms;
+
+# DPM
+allow init hal_dpmQmiMgr:binder { call transfer };
+allow init hal_dpmqmi_hwservice:hwservice_manager find;
+
 # DT2W
 allow init sysfs_dt2w:file { rw_file_perms setattr };
+
+# Fingerprint
+allow init fingerprintd_custom_service:service_manager add;
+allow init hal_fingerprint_hwservice:hwservice_manager add;
+allow init fingerprintd_data_file:file rename;
 
 # Light
 allow init sysfs_graphics:file setattr;
@@ -14,15 +26,43 @@ allow init sysfs_graphics:file setattr;
 allow init sysfs_mmc_host:file { setattr w_file_perms relabelfrom };
 allow init sysfs_mmc_host:dir { relabelfrom };
 
+# Netutils
+allow init netutils_wrapper_exec:file { rw_file_perms execute_no_trans execute };
+
 # Vendor
 allow init vendor_file:dir relabelfrom;
 allow init vendor_file:file relabelfrom;
 allow init vendor_configs_file:dir relabelfrom;
 allow init vendor_configs_file:file relabelfrom;
+allow init mnt_vendor_file:dir mounton;
+allow init tmp_root_mount_file:dir mounton;
+allow init hwservicemanager:binder { call transfer };
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init vendor_file:file execute_no_trans;
+allow init fpc_sysfs:file { write open read };
+allow init tee_device:chr_file { ioctl read write open };
+allow init sysfs:file { read open };
+allow init ion_device:chr_file { read open ioctl };
+allow init uhid_device:chr_file { write open ioctl };
+allow init init:rawip_socket setopt;
+allow init hal_drm_hwservice:hwservice_manager add;
+allow init system_server:binder call;
+allow init storage_file:lnk_file read;
+allow init mnt_user_file:lnk_file read;
+allow init sdcardfs:dir search;
 
 # Bluetooth
 allow init btnvtool_exec:file execute_no_trans;
 
 # System
 allow init system_file:dir relabelfrom;
-allow init system_file:file relabelfrom;
+allow init system_file:file { relabelfrom execute_no_trans };
+
+# Persist
+allow init persist_file:lnk_file read;
+
+# Rawip
+allow init init:rawip_socket { create getopt };
+
+# Netlink
+allow init init:netlink_route_socket { create bind write nlmsg_read read };

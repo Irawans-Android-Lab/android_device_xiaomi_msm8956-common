@@ -1,1 +1,5 @@
 allow time_daemon unlabeled:dir search;
+allow time_daemon persist_file:lnk_file read;
+allow time_daemon mnt_vendor_file:dir search;
+allow time_daemon mnt_vendor_file:file { read write open };
+

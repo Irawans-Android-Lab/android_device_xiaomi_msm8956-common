@@ -1,1 +1,2 @@
 allow crash_dump tmpfs:dir search;
+allow crash_dump init:process ptrace;

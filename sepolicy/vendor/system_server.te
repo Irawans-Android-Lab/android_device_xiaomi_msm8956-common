@@ -12,6 +12,9 @@ allow system_server sdcardfs:file read;
 allow system_server sysfs_dt2w:dir search;
 allow system_server sysfs_dt2w:file rw_file_perms;
 
+# Init
+allow system_server init:binder { call transfer };
+
 # Input devices
 r_dir_file(system_server, idc_file);
 r_dir_file(system_server, keylayout_file);

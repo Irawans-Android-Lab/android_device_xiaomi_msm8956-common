@@ -1,3 +1,7 @@
 allow servicemanager hal_fingerprint_8956:dir { search };
 allow servicemanager hal_fingerprint_8956:file { r_file_perms };
 allow servicemanager hal_fingerprint_8956:process { getattr };
+
+allow servicemanager mediaswcodec:dir search;
+allow servicemanager mediaswcodec:file { read open };
+allow servicemanager mediaswcodec:process getattr;

@@ -1,0 +1,2 @@
+# DPM
+allow vendor_init dpmd_data_file:dir { setattr search };
