@@ -72,6 +72,5 @@ patchelf --replace-needed libbase.so libbase-v28.so $COMMON_BLOB_ROOT/vendor/lib
 patchelf --replace-needed "libbase.so" "libbase-hax.so" $COMMON_BLOB_ROOT/vendor/lib/lib-uceservice.so
 patchelf --replace-needed "libbase.so" "libbase-hax.so" $COMMON_BLOB_ROOT/vendor/lib64/lib-uceservice.so
 patchelf --replace-needed "libbase.so" "libbase-hax.so" $COMMON_BLOB_ROOT/vendor/bin/imsrcsd
-patchelf --remove-needed "libcrypto_keystore.so" $COMMON_BLOB_ROOT/vendor/lib64/hw/keystore.msm8952.so
 
 "$MY_DIR"/setup-makefiles.sh
