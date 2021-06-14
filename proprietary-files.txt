@@ -332,8 +332,8 @@ etc/firmware/a530_pm4.fw
 # IPA
 vendor/bin/ipacm-diag
 
-# Keystore - from smartron-rimo02a-8.0.0-T5524INDURC-475
-vendor/lib64/hw/keystore.msm8952.so|20a5ac06eff901c97de41277ab1948d75b630c5b
+# Keystore - from eng.tark.20210506.042148
+vendor/lib64/hw/keystore.msm8952.so|ae9460770b516bc85b30f4da88488749550b85ac
 
 # Listen	
 vendor/lib/hw/sound_trigger.primary.msm8952.so	
