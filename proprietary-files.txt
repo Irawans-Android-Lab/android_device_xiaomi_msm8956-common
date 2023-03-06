@@ -1,3 +1,5 @@
+## hydrogen package version: V10.3.2.0.NBCCNXM, unless stated otherwise
+
 # ADSP
 bin/adsprpcd
 vendor/lib64/libadsp_default_listener.so
